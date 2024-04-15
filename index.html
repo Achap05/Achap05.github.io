@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -7,129 +7,106 @@
   </head>
   <body>
     <p>This is my page</p>
-  </body>
-  <form action="/ma-page-de-traitement" method="post">…</form>
+  <form action="/ma-page-de-traitement" method="post" >
   
-    <ul>
-      <li>
-        <label for="name">Prénom&nbsp;:</label>
-         <input type="text" id="name" name="user_name" />
-        </li>
-          <br>
+  
+      <label for="user_name">Prénom&nbsp;:</label>
+         <input type="text" id="user_name" name="user_name" required  >
+<br>
 
-        <li>
             <label for="name">Nom&nbsp;:</label>
-                <input type="text" id="name" name="user_name" />
-     </li>
-        <br>
+                <input type="text" id="name" name="name" required  >
+                <br>
 
-      <li>Age:
-        <input type="number min 0" id="Age" Age="user_age" />
-      </li>
-        <br>
 
-      <li>Sexe:
-         <select> name="Sexe">
-            <option value="Homme" selected>Homme</option>
+        <label for="user_age">Age&nbsp;:</label>
+        <input type="number"  id="user_age" name="user_age"  min="0" max="100" required >
+<br>
+
+<label for="Sex">Sexe:</label>
+         <select id="Sex" name="Sex" required >
+          <option value="" disabled selected>---</option>
+            <option value="Homme" >Homme</option>
             <option value="Femme">Femme</option>
           </select>
-      </li>
-        <br>
-
-      <li>
-        <label for="mail">E-mail&nbsp;:</label>
-        <input type="email" id="mail" mail="user_mail" />
-      </li>
-        <br>
-
-      <li>
-        <label for="Adresse postale">Adresse postale&nbsp;:</label>
-         <input type="text" id="Adresse postale" Adresse postale="user_post adress" />
-        </li>
           <br>
-
-      <label><li>Code postal:
-        </label> <input type="number min 0 max 99999" id="Code postal" Code postal="user_postal_code" pattern="^[0-9]" required title="Only number">
-      </li>
-        <br>
-
-      <li>Ville:
-        <input type="text" id="Ville" Ville="user_city">
-      </li>
-        <br>
         
+        <label for="mail">E-mail&nbsp;:</label>
+        <input type="email" id="mail" name="mail"  required >
+<br>
 
-      <li>Métier exercé
-        <select> 
-        <option value="Développeur" selected>Développeur</option>
-         <option value="Peintre" selected>Peintre</option>
+        <label for="Adresse-postale">Adresse postale&nbsp;:</label>
+         <input type="text" id="Adresse-postale" name="Adresse-postale" required >
+<br>
+
+      <label>Code postal:
+        </label> <input type="text" id="Code_postal" pattern="[0-9]{5}" maxlength="5"  required >
+      <br>
+
+
+      <label for="user_city">Ville&nbsp;:</label>
+        <input type="text" id="user_city" name="user_city" required >
+      <br>
+      
+      <label for="job">Métier exercé:</label>
+        <select id="job"  name="job" required >
+        <option value="" disabled selected>---</option>
+        <option value="Développeur" >Développeur</option>
+         <option value="Peintre" >Peintre</option>
          <option value="Carreleur">Carreleur</option>
          <option value="Charpentier">Charpentier</option>
             </select>
-        </li>  
-        <br>
+<br>
 
-
-      <li>Nationalité
-        <select> name="Nationalité">
-            <option value="Français" selected>Française</option>
+<label for="natio">Nationalité:</label>
+  <select id="natio"  name="natio" required>
+    <option value="" disabled selected>---</option>
+            <option value="Français" >Française</option>
             <option value="Royaume-Uni">Anglaise</option>
             <option value="Italie">Italienne</option>
             <option value="Allemagne">Allemande</option>
             <option value="Espagne">Espagnole</option>
             <option value="Belgique">Belge</option>
           </select>
-      </li>
-       <br>
-   
+  <br>
 
-      <li>Date de naissance JJ/MM/AAAA</li>
-        <input type="number min 0" id="date de naissance" date de naissance="user_birthday">
-        <br>
-          <br>
+      <label for="user_birthday">Date de naissance&nbsp;:</label>       
+        <input type="date" id="user_birthday" name="user_birthday">
+<br>
 
-      <li>Pays de naissance
-        <select> name="Pays de naissance">
-          <option value="France" selected>France</option>
+
+<label for="country">Pays de naissance:</label>
+  <select id="country"  name="country" required >
+    <option value="" disabled selected>---</option>
+          <option value="France" >France</option>
           <option value="Royaume-Uni">Royaume-Uni</option>
           <option value="Italie">Italie</option>
           <option value="Allemagne">Allemagne</option>
           <option value="Espagne">Espagne</option>
           <option value="Belgique">Belgique</option>
         </select>
-      </li>
       <br>
 
-      <li>Message:</li>
-        <textarea id="msg" name="user_message"></textarea>
-          </li>
-          <br>
-
-      <li>Numéro de sécurité sociale:
-        <input type="numéro de sécurité sociale" id="numéro de sécurité sociale" numéro de sécurité sociale="user_social security n" />
-      </li>
+ <label for="user_social_security_n">Numéro de sécurité sociale&nbsp;:</label>        
+  <input type="text" id="user_social_security_n" name="user_social_security_n" pattern="[0-9]{13}" maxlength="13" required >
       <br>
 
-      <li>Numéro du passeport:
-        <input type="number min 0" id="Numéro du passeport" Numéro du passeport="user_passport number"/>
-      </li>
-      <br>
-
-      <li>Date de délivrance du passeport:
-        <input type="number min 0" id="Date de délivrance du passeport" Date de délivrance du passeport="user_passport get">
-      </li>
-      <br>
-
-      
-      <li>Date de validité du passeport:
-        <input type="number min 0" id="date de naissance" date de naissance="user_birthday">
-      </li>
+  <label for="user_passport_number">Numéro de passeport&nbsp;:</label>
+        <input type="text" id="user_passport_number" name="user_passport_number" pattern="[0-9]{2}[A-Z]{2}[0-9]{5}" maxlength="9" required >
       <br>
     
+
+   <label for="user_passport_get">Date de délivrance du passeport&nbsp;:</label>        
+        <input type="date" id="user_passport_get" name="user_passport_get" required>
+      <br>
+      
+        <label for="passport_val">Date de validité du passeport&nbsp;:</label>  
+        <input type="date" id="passport_val" name="passport_val" required>
+      <br>
+      
       <input type="submit" name="submit" value="Confirmer">
+<br>
 
-
-    </ul>
   </form>
-  
+  </body>
 </html>
